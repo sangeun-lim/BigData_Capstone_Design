@@ -40,7 +40,7 @@
 - 팀원 임상은, 송정현 참여
 
 # 진행 상황
-
+- ERD (https://www.erdcloud.com/d/H8ZPgzzvSk6SM5uD2)
 # 주요 문서
 
 # 참고 자료
