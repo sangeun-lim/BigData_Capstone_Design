@@ -46,6 +46,7 @@
 
 # 진행 상황
 - ERD (https://www.erdcloud.com/d/H8ZPgzzvSk6SM5uD2)
+- 웹 사이트(http://54.180.93.104:8080/index)
 
 # 주요 문서
 
