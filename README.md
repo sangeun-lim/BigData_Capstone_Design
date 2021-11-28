@@ -18,7 +18,7 @@
 - AWS EC2, Filezilla
 - putty, tomcat8
 - github
-- 
+
 # 기능
 - 회원 가입 및 로그인으로 웹 서비스 이용
 - 마이페이지에서 내가 가진 재료를 냉장고에 추가 및 삭제 
