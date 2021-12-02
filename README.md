@@ -18,6 +18,7 @@
 - AWS EC2, Filezilla
 - putty, tomcat8
 - github
+![KakaoTalk_20211202_214340291](https://user-images.githubusercontent.com/63418624/144466664-20c4bb6a-2c31-4fbe-82f6-a29d6d4e5bb0.png)
 
 # 기능
 - 회원 가입 및 로그인으로 웹 서비스 이용
