@@ -50,9 +50,21 @@
 
 # 구체적인 수행 내용
 - 테이블 구성 및 ERD (https://www.erdcloud.com/d/H8ZPgzzvSk6SM5uD2)
+![ERD1](https://user-images.githubusercontent.com/63418624/144480342-4dd0da76-09e1-465c-8513-ff952c065763.PNG)
+![ERD2](https://user-images.githubusercontent.com/63418624/144480379-b4f936e0-eae2-446c-b4dc-af31953a09b5.PNG)
+![ERD3](https://user-images.githubusercontent.com/63418624/144480388-d4eeba62-2fef-4767-9732-5528032b5ca2.PNG)
+
 - 로그인 및 회원가입
+![로그인](https://user-images.githubusercontent.com/63418624/144480439-a6d689ca-eaee-401c-9b15-3a90ba244a8e.PNG)
+![회원가입](https://user-images.githubusercontent.com/63418624/144480449-d45f4a5c-fd28-4361-8ea3-337d210e2228.PNG)
+
 - 회원정보 수정
+![로그인 후](https://user-images.githubusercontent.com/63418624/144480478-194c4b5c-bed0-4821-8621-5dfc9cd7beca.PNG)
+![회원 정보 수정](https://user-images.githubusercontent.com/63418624/144480459-0c989d97-19d9-48a8-ab38-7536ae58d93f.PNG)
+
 - 홈페이지 메인창 및 데일리 추천
+![메인창](https://user-images.githubusercontent.com/63418624/144480583-d93be55d-0cae-4be2-8b26-f7f3ff0b08af.PNG)
+
 - 게시판 메인
 - 게시판 검색 기능
 - 게시글 첨부파일 추가 기능
