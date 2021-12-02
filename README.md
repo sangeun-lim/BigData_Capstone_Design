@@ -55,29 +55,58 @@
 ![ERD3](https://user-images.githubusercontent.com/63418624/144480388-d4eeba62-2fef-4767-9732-5528032b5ca2.PNG)
 
 - 로그인 및 회원가입
+
 ![로그인](https://user-images.githubusercontent.com/63418624/144480439-a6d689ca-eaee-401c-9b15-3a90ba244a8e.PNG)
+
 ![회원가입](https://user-images.githubusercontent.com/63418624/144480449-d45f4a5c-fd28-4361-8ea3-337d210e2228.PNG)
 
 - 회원정보 수정
+
 ![로그인 후](https://user-images.githubusercontent.com/63418624/144480478-194c4b5c-bed0-4821-8621-5dfc9cd7beca.PNG)
+
 ![회원 정보 수정](https://user-images.githubusercontent.com/63418624/144480459-0c989d97-19d9-48a8-ab38-7536ae58d93f.PNG)
 
 - 홈페이지 메인창 및 데일리 추천
 ![메인창](https://user-images.githubusercontent.com/63418624/144480583-d93be55d-0cae-4be2-8b26-f7f3ff0b08af.PNG)
 
 - 게시판 메인
+![게시판](https://user-images.githubusercontent.com/63418624/144480533-aaf70367-018c-408b-8df9-c0ae0957a1f3.PNG)
+
 - 게시판 검색 기능
+![게시판 검색기능](https://user-images.githubusercontent.com/63418624/144480518-42baa850-d3e0-4b25-8d1f-b55092db72e7.PNG)
+
 - 게시글 첨부파일 추가 기능
+![첨부파일 추가 기능](https://user-images.githubusercontent.com/63418624/144480629-7140f6c1-8d80-408d-b578-cf0bc51cadf0.PNG)
+
 - 게시글 댓글 기능
+![댓글기능](https://user-images.githubusercontent.com/63418624/144480547-5465c999-8160-4e3a-96d1-5b4bd90e54a2.PNG)
+
 - 칵테일 검색 기능
+![칵테일 검색 기능](https://user-images.githubusercontent.com/63418624/144480654-7558b2a9-e56e-4ea3-a0ce-c7b65a6bdefb.png)
+
 - 냉장고 재료 추가 및 삭제 기능
+![냉장고 재료 추가 삭제](https://user-images.githubusercontent.com/63418624/144480539-a3cc862a-b35f-472e-962b-9218d5b21df9.PNG)
+
 - 가지고 있는 재료로 만들 수 있는 칵테일 표시
+![만들 수 있는 칵테일 표시](https://user-images.githubusercontent.com/63418624/144480576-b2ffbd83-936a-4794-b3c1-a105f53a7ae6.PNG)
+
 - 칵테일 즐겨찾기(홈,칵테일탭, 마이페이지 등 칵테일 그림이 있는 모든 페이지에서 추가가능)
+![즐겨찾기 기능](https://user-images.githubusercontent.com/63418624/144480596-0644cd59-46f4-461c-998a-fda85def9a43.PNG)
+
 - 마이페이지에서 내가 쓴 글 목록 보기 
+![마이페이지 내가 쓴 글 목록](https://user-images.githubusercontent.com/63418624/144480565-c9ef4123-fa95-4e2c-b85c-9ca7ef3ef98b.PNG)
+
 - 레시피 클릭 시 제조법 및 없는 재료 표시
+![제조법 및 없는 재료 표시](https://user-images.githubusercontent.com/63418624/144480586-8d1e482e-0fb7-4dfc-b456-60a67cb372fb.PNG)
+
 - 칵테일 추천 알고리즘 단면도
+
 - 전체 칵테일 레시피 목록 및 기주 별 목록
+![칵테일탭](https://user-images.githubusercontent.com/63418624/144480667-a81d553f-5923-4569-b231-00584dcc540e.PNG)
+
 - 초성 검색 기능
+![초성검색](https://user-images.githubusercontent.com/63418624/144480643-b1b5fb33-fb47-4d30-807f-529b447b7d99.PNG)
+
 # 개선점
 - 비밀번호 찾기 기능
 - 결제 시스템(멤버십 기능 활성화를 위해)
