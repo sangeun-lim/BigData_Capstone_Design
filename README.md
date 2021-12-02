@@ -46,7 +46,9 @@
 
 # 진행 상황
 - ERD (https://www.erdcloud.com/d/H8ZPgzzvSk6SM5uD2)
-- 웹 사이트(http://54.180.30.151:8080/index)
+- 웹 사이트1(http://54.180.30.151:8080/index)
+- 웹 사이트2(http://bartender-991835918.ap-northeast-2.elb.amazonaws.com/index) 
+- 로드밸런싱으로 사이트 운영
 
 # 주요 문서
 
