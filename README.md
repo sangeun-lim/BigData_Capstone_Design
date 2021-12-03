@@ -66,7 +66,7 @@
 
 ![로그인 후](https://user-images.githubusercontent.com/63418624/144480478-194c4b5c-bed0-4821-8621-5dfc9cd7beca.PNG)
 
-![회원 정보 수정](https://user-images.githubusercontent.com/63418624/144480459-0c989d97-19d9-48a8-ab38-7536ae58d93f.PNG)
+![회원 정보 수정](https://user-images.githubusercontent.com/63418624/144612394-bb8b854e-bd76-499f-90f3-df8fcdd30519.PNG)
 
 - 홈페이지 메인창 및 데일리 추천
 ![메인창](https://user-images.githubusercontent.com/63418624/144480583-d93be55d-0cae-4be2-8b26-f7f3ff0b08af.PNG)
