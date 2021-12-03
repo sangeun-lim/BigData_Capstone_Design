@@ -44,12 +44,6 @@
 - 2021.09.28-09.29 AWS EC2 관리 특강 19:00~21:00 
 - 팀원 임상은, 송정현 참여
 
-# 수행 결과
-- 웹 사이트1(http://54.180.30.151:8080/index)
-- 웹 사이트2(http://bartender-991835918.ap-northeast-2.elb.amazonaws.com/index) 
-- AWS EC2를 이용해서 서버를 운용
-- AWS ELB를 이용하여 로드밸런싱
-
 # 구체적인 수행 내용
 - 테이블 구성 및 ERD (https://www.erdcloud.com/d/H8ZPgzzvSk6SM5uD2)
 ![ERD1](https://user-images.githubusercontent.com/63418624/144480342-4dd0da76-09e1-465c-8513-ff952c065763.PNG)
@@ -108,6 +102,12 @@
 
 - 초성 검색 기능
 ![초성검색](https://user-images.githubusercontent.com/63418624/144480643-b1b5fb33-fb47-4d30-807f-529b447b7d99.PNG)
+
+# 수행 결과
+- 웹 사이트1(http://54.180.30.151:8080/index)
+- 웹 사이트2(http://bartender-991835918.ap-northeast-2.elb.amazonaws.com/index) 
+- AWS EC2를 이용해서 서버를 운용
+- AWS ELB를 이용하여 로드밸런싱
 
 # 개선점
 - 비밀번호 찾기 기능
