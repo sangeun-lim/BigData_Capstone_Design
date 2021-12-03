@@ -96,12 +96,23 @@
 ![제조법 및 없는 재료 표시](https://user-images.githubusercontent.com/63418624/144480586-8d1e482e-0fb7-4dfc-b456-60a67cb372fb.PNG)
 
 - 칵테일 추천 알고리즘 단면도
+![캡처](https://user-images.githubusercontent.com/74958665/144619782-84854ad1-2765-4395-bd87-11c31a549426.PNG)
+![2_1](https://user-images.githubusercontent.com/74958665/144619803-5aacf064-1ed2-48de-ba58-eb46b8ccbbf2.PNG)
+![2_2](https://user-images.githubusercontent.com/74958665/144619808-db04e6d9-cb43-44ea-b722-641a4fdf4208.PNG)
 
 - 전체 칵테일 레시피 목록 및 기주 별 목록
 ![칵테일탭](https://user-images.githubusercontent.com/63418624/144480667-a81d553f-5923-4569-b231-00584dcc540e.PNG)
 
 - 초성 검색 기능
 ![초성검색](https://user-images.githubusercontent.com/63418624/144480643-b1b5fb33-fb47-4d30-807f-529b447b7d99.PNG)
+
+- AWS
+![KakaoTalk_20211202_220902576](https://user-images.githubusercontent.com/74958665/144619962-f79f860d-df9c-4781-8494-c6778b3e238d.png)
+
+- AWS 로드밸런싱
+![KakaoTalk_20211202_221004875](https://user-images.githubusercontent.com/74958665/144619987-af6d995f-1a90-45e0-bb7c-e871b9d5e328.png)
+![KakaoTalk_20211202_220946111](https://user-images.githubusercontent.com/74958665/144619996-d85c60be-644c-4bb0-8fca-064b264ed3a7.png)
+
 
 # 프로젝트 결과물
 - 웹 사이트1(http://54.180.30.151:8080/index)
