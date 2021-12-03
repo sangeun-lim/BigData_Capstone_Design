@@ -103,7 +103,7 @@
 - 초성 검색 기능
 ![초성검색](https://user-images.githubusercontent.com/63418624/144480643-b1b5fb33-fb47-4d30-807f-529b447b7d99.PNG)
 
-# 수행 결과
+# 프로젝트 결과물
 - 웹 사이트1(http://54.180.30.151:8080/index)
 - 웹 사이트2(http://bartender-991835918.ap-northeast-2.elb.amazonaws.com/index) 
 - AWS EC2를 이용해서 서버를 운용
