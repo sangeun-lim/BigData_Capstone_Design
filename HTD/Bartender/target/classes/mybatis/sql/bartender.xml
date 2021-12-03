@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.hallym.mybatis.sql.bartender">
+	<select id="selectUser" parameterType="String" resultType="int">
+		SELECT count(*) FROM user WHERE #{user_id} = user_id
+	</select>
+	
+	<insert id="signUp">
+		<![CDATA[
+			insert into user(user_no, user_id, user_pw, user_nick, email)
+			values (#{user_no}, #{user_id}, #{user_pw}, #{user_nick}, #{email})
+		]]>
+	</insert>
+	
+	<select id="maxNo" resultType="int">
+		select MAX(user_no) from user;
+	</select>
+	
+	<select id="selectUserInfo" parameterType="hashmap" resultType="com.hallym.vo.userVO">
+		SELECT * FROM user WHERE #{user_id} = user_id and #{user_pw} = user_pw
+	</select>
+	
+	<select id="selectRandomCocktailInfo" resultType="com.hallym.vo.ciVO">
+		select * from cocktail_recipe where
+				ig1 = #{ig1} or
+				ig2 = #{ig1} or
+				ig3 = #{ig1} or
+				ig4 = #{ig1}				
+	</select>
+	
+	<select id="loadSpiritIg" parameterType="hashmap" resultType="com.hallym.vo.ingredientsVO">
+		SELECT * FROM ingredients WHERE spirits_type = #{spirits_type}
+	</select>
+	
+	<select id="selectCocktail" resultType="com.hallym.vo.ciVO">
+		select a.cocktail_no, a.cocktail_name, a.method, a.image, a.garnish, a.make, a.ig1, a.ig2, a.ig3, a.ig4, a.ig5, a.ig6, a.ig7, a.ig8, a.ig9, a.ig10, 
+			b.ig_name as ig1_name, a.ig1_amt,
+            c.ig_name as ig2_name, a.ig2_amt,
+            d.ig_name as ig3_name, a.ig3_amt,
+            e.ig_name as ig4_name, a.ig4_amt,
+            f.ig_name as ig5_name, a.ig5_amt,
+            g.ig_name as ig6_name, a.ig6_amt,
+            h.ig_name as ig7_name, a.ig7_amt,
+            i.ig_name as ig8_name, a.ig8_amt,
+            j.ig_name as ig9_name, a.ig9_amt,
+            k.ig_name as ig10_name, a.ig10_amt,
+            l.glass_name
+			
+			from cocktail_recipe a 
+			
+			left outer join ingredients b on b.ig = a.ig1
+			left outer join ingredients c on c.ig = a.ig2
+			left outer join ingredients d on d.ig = a.ig3
+			left outer join ingredients e on e.ig = a.ig4
+			left outer join ingredients f on f.ig = a.ig5
+			left outer join ingredients g on g.ig = a.ig6
+			left outer join ingredients h on h.ig = a.ig7
+			left outer join ingredients i on i.ig = a.ig8
+			left outer join ingredients j on j.ig = a.ig9
+			left outer join ingredients k on k.ig = a.ig10
+			left outer join glass l on l.glass_no = a.glass
+			where a.cocktail_name = #{cocktail_name}
+	</select>
+	
+	<select id="searchCocktail" resultType="com.hallym.vo.ciVO">
+		select * from cocktail_recipe where cocktail_name like CONCAT('%',#{cocktail_name},'%');
+	</select>
+	
+	<select id="selectIngredients" resultType="com.hallym.vo.ingredientsVO">
+		select * from ingredients;
+	</select>
+	
+	<select id="searchIg" resultType="com.hallym.vo.ingredientsVO">
+		select * from ingredients where ig_name like CONCAT('%',#{ig_name},'%');
+	</select>
+	
+	<update id="modifyInfo" parameterType="com.hallym.vo.userVO">
+		UPDATE user
+		SET user_pw = #{user_pw}, email = #{email}
+		WHERE user_id = #{user_id}
+	</update>
+	
+	<insert id="addRefridge" parameterType="com.hallym.vo.refrigeratorVO">
+		insert into refrigerator(user_no) 
+		values(#{user_no});
+	</insert>
+	
+	<update id="updateRefrige" parameterType="com.hallym.vo.refrigeratorVO">
+		update refrigerator
+		set
+		<choose>
+			<when test='sequence==1'>
+				ig1 = #{ig1}
+			</when>
+			<when test='sequence==2'>
+				ig2 = #{ig1}
+			</when>
+			<when test='sequence==3'>
+				ig3 = #{ig1}
+			</when>
+			<when test='sequence==4'>
+				ig4 = #{ig1}
+			</when>
+			<when test='sequence==5'>
+				ig5 = #{ig1}
+			</when>
+			<when test='sequence==6'>
+				ig6 = #{ig1}
+			</when>
+			<when test='sequence==7'>
+				ig7 = #{ig1}
+			</when>
+			<when test='sequence==8'>
+				ig8 = #{ig1}
+			</when>
+			<when test='sequence==9'>
+				ig9 = #{ig1}
+			</when>
+			<when test='sequence==10'>
+				ig10 = #{ig1}
+			</when>
+			<when test='sequence==11'>
+				ig11 = #{ig1}
+			</when>
+			<when test='sequence==12'>
+				ig12 = #{ig1}
+			</when>
+			<when test='sequence==13'>
+				ig13 = #{ig1}
+			</when>
+			<when test='sequence==14'>
+				ig14 = #{ig1}
+			</when>
+			<when test='sequence==15'>
+				ig15 = #{ig1}
+			</when>
+			<when test='sequence==16'>
+				ig16 = #{ig1}
+			</when>
+			<when test='sequence==17'>
+				ig17 = #{ig1}
+			</when>
+			<when test='sequence==18'>
+				ig18 = #{ig1}
+			</when>
+			<when test='sequence==19'>
+				ig19 = #{ig1}
+			</when>
+			<when test='sequence==20'>
+				ig20 = #{ig1}
+			</when>
+			<when test='sequence==21'>
+				ig21 = #{ig1}
+			</when>
+			<when test='sequence==22'>
+				ig22 = #{ig1}
+			</when>
+			<when test='sequence==23'>
+				ig23 = #{ig1}
+			</when>
+			<when test='sequence==24'>
+				ig24 = #{ig1}
+			</when>
+			<when test='sequence==25'>
+				ig25 = #{ig1}
+			</when>
+			<when test='sequence==26'>
+				ig26 = #{ig1}
+			</when>
+			<when test='sequence==27'>
+				ig27 = #{ig1}
+			</when>
+			<when test='sequence==28'>
+				ig28 = #{ig1}
+			</when>
+			<when test='sequence==29'>
+				ig29 = #{ig1}
+			</when>
+			<when test='sequence==30'>
+				ig30 = #{ig1}
+			</when>
+		</choose>
+		where user_no = #{user_no}
+	</update>
+	
+	<select id="selectRefrige" parameterType="com.hallym.vo.refrigeratorVO" resultType="com.hallym.vo.refrigeratorVO">
+		select a.user_no, a.ig1, a.ig2, a.ig3, a.ig4, a.ig5, a.ig6, a.ig7, a.ig8, a.ig9, a.ig10, 
+			a.ig11, a.ig12, a.ig13, a.ig14, a.ig15, a.ig16, a.ig17, a.ig18, a.ig19, a.ig20,
+			 a.ig21, a.ig22, a.ig23, a.ig24, a.ig25, a.ig26, a.ig27, a.ig28, a.ig29, a.ig30,
+			b.ig_name as ig1_name, b.ig_pic as ig1_pic,
+            c.ig_name as ig2_name, c.ig_pic as ig2_pic,
+            d.ig_name as ig3_name, d.ig_pic as ig3_pic,
+            e.ig_name as ig4_name, e.ig_pic as ig4_pic,
+            f.ig_name as ig5_name, f.ig_pic as ig5_pic,
+            g.ig_name as ig6_name, g.ig_pic as ig6_pic,
+            h.ig_name as ig7_name, h.ig_pic as ig7_pic,
+            i.ig_name as ig8_name, i.ig_pic as ig8_pic,
+            j.ig_name as ig9_name, j.ig_pic as ig9_pic,
+            k.ig_name as ig10_name, k.ig_pic as ig10_pic,
+            l.ig_name as ig11_name, l.ig_pic as ig11_pic,
+            m.ig_name as ig12_name, m.ig_pic as ig12_pic,
+            n.ig_name as ig13_name, n.ig_pic as ig13_pic,
+            o.ig_name as ig14_name, o.ig_pic as ig14_pic,
+            p.ig_name as ig15_name, p.ig_pic as ig15_pic,
+            q.ig_name as ig16_name, q.ig_pic as ig16_pic,
+            r.ig_name as ig17_name, r.ig_pic as ig17_pic,
+            s.ig_name as ig18_name, s.ig_pic as ig18_pic,
+            t.ig_name as ig19_name, t.ig_pic as ig19_pic,
+            u.ig_name as ig20_name, u.ig_pic as ig20_pic,
+            v.ig_name as ig21_name, v.ig_pic as ig21_pic,
+            w.ig_name as ig22_name, w.ig_pic as ig22_pic,
+            x.ig_name as ig23_name, x.ig_pic as ig23_pic,
+            y.ig_name as ig24_name, y.ig_pic as ig24_pic,
+            z.ig_name as ig25_name, z.ig_pic as ig25_pic,
+            a1.ig_name as ig26_name, a1.ig_pic as ig26_pic,
+            a2.ig_name as ig27_name, a2.ig_pic as ig27_pic,
+            a3.ig_name as ig28_name, a3.ig_pic as ig28_pic,
+            a4.ig_name as ig29_name, a4.ig_pic as ig29_pic,
+            a5.ig_name as ig30_name, a5.ig_pic as ig30_pic
+        
+        from refrigerator a
+	        left outer join ingredients b on b.ig = a.ig1
+			left outer join ingredients c on c.ig = a.ig2
+			left outer join ingredients d on d.ig = a.ig3
+			left outer join ingredients e on e.ig = a.ig4
+			left outer join ingredients f on f.ig = a.ig5
+			left outer join ingredients g on g.ig = a.ig6
+			left outer join ingredients h on h.ig = a.ig7
+			left outer join ingredients i on i.ig = a.ig8
+			left outer join ingredients j on j.ig = a.ig9
+			left outer join ingredients k on k.ig = a.ig10
+			left outer join ingredients l on l.ig = a.ig11
+			left outer join ingredients m on m.ig = a.ig12
+			left outer join ingredients n on n.ig = a.ig13
+			left outer join ingredients o on o.ig = a.ig14
+			left outer join ingredients p on p.ig = a.ig15
+			left outer join ingredients q on q.ig = a.ig16
+			left outer join ingredients r on r.ig = a.ig17
+			left outer join ingredients s on s.ig = a.ig18
+			left outer join ingredients t on t.ig = a.ig19
+			left outer join ingredients u on u.ig = a.ig20
+			left outer join ingredients v on v.ig = a.ig21
+			left outer join ingredients w on w.ig = a.ig22
+			left outer join ingredients x on x.ig = a.ig23
+			left outer join ingredients y on y.ig = a.ig24
+			left outer join ingredients z on z.ig = a.ig25
+			left outer join ingredients a1 on a1.ig = a.ig26
+			left outer join ingredients a2 on a2.ig = a.ig27
+			left outer join ingredients a3 on a3.ig = a.ig28
+			left outer join ingredients a4 on a4.ig = a.ig29
+			left outer join ingredients a5 on a5.ig = a.ig30
+		where user_no = #{user_no} 
+	</select>
+	
+	<update id="deleteRefri" parameterType="com.hallym.vo.refrigeratorVO">
+		UPDATE refrigerator 
+		<set>
+			<if test="del == 'ig1'">ig1=null</if>
+			<if test="del == 'ig2'">ig2=null</if>
+			<if test="del == 'ig3'">ig3=null</if>
+			<if test="del == 'ig4'">ig4=null</if>
+			<if test="del == 'ig5'">ig5=null</if>
+			<if test="del == 'ig6'">ig6=null</if>
+			<if test="del == 'ig7'">ig7=null</if>
+			<if test="del == 'ig8'">ig8=null</if>
+			<if test="del == 'ig9'">ig9=null</if>
+			<if test="del == 'ig10'">ig10=null</if>
+			<if test="del == 'ig11'">ig11=null</if>
+			<if test="del == 'ig12'">ig12=null</if>
+			<if test="del == 'ig13'">ig13=null</if>
+			<if test="del == 'ig14'">ig14=null</if>
+			<if test="del == 'ig15'">ig15=null</if>
+			<if test="del == 'ig16'">ig16=null</if>
+			<if test="del == 'ig17'">ig17=null</if>
+			<if test="del == 'ig18'">ig18=null</if>
+			<if test="del == 'ig19'">ig19=null</if>
+			<if test="del == 'ig20'">ig20=null</if>
+			<if test="del == 'ig21'">ig21=null</if>
+			<if test="del == 'ig22'">ig22=null</if>
+			<if test="del == 'ig23'">ig23=null</if>
+			<if test="del == 'ig24'">ig24=null</if>
+			<if test="del == 'ig25'">ig25=null</if>
+			<if test="del == 'ig26'">ig26=null</if>
+			<if test="del == 'ig27'">ig27=null</if>
+			<if test="del == 'ig28'">ig28=null</if>
+			<if test="del == 'ig29'">ig29=null</if>
+			<if test="del == 'ig30'">ig30=null</if>
+		</set>
+		WHERE user_no = #{user_no};
+	</update>
+	
+	<select id="fitCocktail" resultType="com.hallym.vo.ciVO">
+		select * 
+		from cocktail_recipe
+		where 
+			ig1 = #{ig} or
+			ig2 = #{ig} or
+			ig3 = #{ig} or
+			ig4 = #{ig} or
+			ig5 = #{ig} or
+			ig6 = #{ig} or
+			ig7 = #{ig} or
+			ig8 = #{ig} or
+			ig9 = #{ig} or
+			ig10 = #{ig}
+	</select>
+	
+	<select id="selectIg" resultType="com.hallym.vo.ciVO">
+		select *
+		from cocktail_recipe
+		where cocktail_no = #{cocktail_no} 
+	</select>
+	
+	<select id="requiredIg" resultType="com.hallym.vo.refrigeratorVO">
+		select user_no
+		from refrigerator
+		where user_no = #{user_no} 
+			and (
+				ig1 = #{ig1} or
+				ig2 = #{ig1} or
+				ig3 = #{ig1} or
+				ig4 = #{ig1} or
+				ig5 = #{ig1} or
+				ig6 = #{ig1} or
+				ig7 = #{ig1} or
+				ig8 = #{ig1} or
+				ig9 = #{ig1} or
+				ig10 = #{ig1} or
+				ig11 = #{ig1} or
+				ig12 = #{ig1} or
+				ig13 = #{ig1} or
+				ig14 = #{ig1} or
+				ig15 = #{ig1} or
+				ig16 = #{ig1} or
+				ig17 = #{ig1} or
+				ig18 = #{ig1} or
+				ig19 = #{ig1} or
+				ig20 = #{ig1} or
+				ig21 = #{ig1} or
+				ig22 = #{ig1} or
+				ig23 = #{ig1} or
+				ig24 = #{ig1} or
+				ig25 = #{ig1} or
+				ig26 = #{ig1} or
+				ig27 = #{ig1} or
+				ig28 = #{ig1} or
+				ig29 = #{ig1} or
+				ig30 = #{ig1}
+			)
+	</select>
+	
+	<insert id="addBoard" parameterType="com.hallym.vo.boardVO">
+		insert into board(no, user_id, title, date, time, content, attach_id) 
+		values(#{no}, #{user_id}, #{title}, #{date}, #{time}, #{content}, #{attach_id});
+	</insert>
+	
+	<insert id="addAttach" parameterType="com.hallym.vo.attachVO">
+		insert into attach(attach_no, attach_id, path, name)
+		values(#{attach_no}, #{attach_id}, #{path}, #{name});
+	</insert>
+	
+	<select id="maxNoBoard" resultType="int">
+		select MAX(no) from board;
+	</select>
+	
+	<select id="maxNoAttach" resultType="int">
+		select MAX(attach_no) from attach;
+	</select>
+	
+	<select id="loadBoardList" resultType="com.hallym.vo.boardVO">
+		SELECT 
+		b.*
+		FROM (
+		SELECT 
+		    @RNUM:=@RNUM+1 AS ROWNUM , 
+		    a.*
+		FROM 
+		    (SELECT @RNUM:=0) R, 
+		    (SELECT * FROM board)a
+		ORDER BY a.no DESC 
+		) as b
+		LIMIT ${start}, ${end}
+	</select>
+	
+	<select id="loadBoardList2" resultType="com.hallym.vo.boardVO">
+		SELECT 
+		b.*
+		FROM (
+		SELECT 
+		    @RNUM:=@RNUM+1 AS ROWNUM , 
+		    a.*
+		FROM 
+		    (SELECT @RNUM:=0) R, 
+		    (SELECT * FROM board)a 
+		WHERE a.title like CONCAT('%', #{word}, '%')
+		ORDER BY a.no DESC
+		) as b
+		LIMIT ${start}, ${end}
+		
+	</select>
+	
+	<select id="loadBoardList3" resultType="com.hallym.vo.boardVO">
+		SELECT 
+		b.*
+		FROM (
+		SELECT 
+		    @RNUM:=@RNUM+1 AS ROWNUM , 
+		    a.*
+		FROM 
+		    (SELECT @RNUM:=0) R, 
+		    (SELECT * FROM board)a
+		WHERE a.user_id = #{user_id}
+		ORDER BY a.no DESC 
+		) as b
+		LIMIT ${start}, ${end}
+	</select>
+	
+	<select id="selectView" resultType="int">
+		select view
+		from board
+		where no = #{no}
+	</select>
+	
+	<select id="loadBoard" resultType="com.hallym.vo.boardVO">
+		select *
+		from board
+		where no = #{no}
+	</select>
+	
+	<update id="updateView" parameterType="com.hallym.vo.boardVO">
+		UPDATE board
+		SET view = #{view}
+		WHERE no = #{no}
+	</update>
+	
+	<select id="loadAttach" resultType="com.hallym.vo.attachVO">
+		select *
+		from attach
+		where attach_id = #{attach_id}
+	</select>
+	
+	<delete id="deleteAttach" parameterType="com.hallym.vo.attachVO">
+		delete from attach where attach_id = #{attach_id} and name = #{name}
+	</delete>
+	
+	<delete id="deleteAttach2" parameterType="com.hallym.vo.attachVO">
+		delete from attach where attach_id = #{attach_id};
+	</delete>
+	
+	<delete id="deleteBoard" parameterType="com.hallym.vo.boardVO">
+		delete from board where no=#{no}
+	</delete>
+	
+	<update id="modifySave" parameterType="com.hallym.vo.boardVO">
+		UPDATE board
+		SET title = #{title}, date = #{date}, time = #{time}, content = #{content}
+		WHERE no = #{no}
+	</update>
+	
+	<select id="loadReply" resultType="com.hallym.vo.replyVO">
+		select *
+		from reply
+		where no = #{no}
+	</select>
+	
+	<insert id="saveReply">
+		<![CDATA[
+			insert into reply(reply_no, no, nreply_no, time, content, user_no, user_id)
+			values (#{reply_no}, #{no}, #{nreply_no}, #{time}, #{content}, #{user_no}, #{user_id})
+		]]>
+	</insert>
+	
+	<select id="maxReplyNo" resultType="int">
+		select MAX(reply_no) from reply;
+	</select>
+	
+	<delete id="deleteReply1" parameterType="com.hallym.vo.replyVO">
+		delete from reply where no = #{no}
+	</delete>
+	
+	<delete id="deleteReply2" parameterType="com.hallym.vo.replyVO">
+		delete from reply where no = #{no} and reply_no = #{reply_no}
+	</delete>
+	
+	<delete id="deleteReply3" parameterType="com.hallym.vo.replyVO">
+		delete from reply where no = #{no} and nreply_no = #{reply_no}
+	</delete>
+	
+	<select id="selectBookmark" resultType="com.hallym.vo.bookmarkVO">
+		select * from bookmark where user_no = #{user_no}
+	</select>
+	
+	<update id="updateBookmark" parameterType="com.hallym.vo.bookmarkVO">
+		UPDATE bookmark
+		SET bookmark_no = #{bookmark_no}
+		WHERE user_no = #{user_no}
+	</update>
+	
+	<insert id="insertBookmark" parameterType="com.hallym.vo.bookmarkVO">
+		insert into bookmark(user_no, bookmark_no)
+		values(#{user_no}, #{bookmark_no});
+	</insert>
+	
+	<select id="loadBC" resultType="com.hallym.vo.ciVO">
+		select * from cocktail_recipe where cocktail_no = #{cocktail_no}
+	</select>
+	
+	<select id="lac" resultType="com.hallym.vo.ciVO">
+		select * from cocktail_recipe
+	</select>
+	
+	<delete id="getout1" parameterType="com.hallym.vo.userVO">
+		delete from user where user_no = #{user_no}
+	</delete>
+	
+	<delete id="getout2" parameterType="com.hallym.vo.userVO">
+		delete from refrigerator where user_no = #{user_no}
+	</delete>
+	
+	<delete id="getout3" parameterType="com.hallym.vo.userVO">
+		delete from bookmark where user_no = #{user_no}
+	</delete>
+	
+	<update id="getout4" parameterType="com.hallym.vo.userVO">
+		UPDATE board
+		SET user_id = "탈퇴한 아이디"
+		WHERE user_id = #{user_id}
+	</update>
+</mapper>
