@@ -56,7 +56,7 @@
 
 ![회원가입](https://user-images.githubusercontent.com/63418624/144480449-d45f4a5c-fd28-4361-8ea3-337d210e2228.PNG)
 
-- 회원정보 수정
+- 회원정보 수정 및 탈퇴
 
 ![로그인 후](https://user-images.githubusercontent.com/63418624/144480478-194c4b5c-bed0-4821-8621-5dfc9cd7beca.PNG)
 
