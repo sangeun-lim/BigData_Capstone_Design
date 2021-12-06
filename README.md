@@ -116,8 +116,9 @@
 
 
 # 프로젝트 결과물
-- 웹 사이트1(http://54.180.30.151:8080/index)
-- 웹 사이트2(http://bartender-991835918.ap-northeast-2.elb.amazonaws.com/index) 
+- 웹 서버1(http://54.180.30.151:8080/index)
+- 웹 서버2(http://3.38.181.8:8080/index)
+- 로드밸런싱 DNS(http://bartender-991835918.ap-northeast-2.elb.amazonaws.com/index) 
 - AWS EC2를 이용해서 서버를 운용
 - AWS ELB를 이용하여 로드밸런싱
 
