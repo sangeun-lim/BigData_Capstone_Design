@@ -124,7 +124,7 @@
 - 로드밸런싱 DNS(http://bartender-991835918.ap-northeast-2.elb.amazonaws.com/index) 
 - AWS EC2를 이용해서 서버를 운용
 - AWS ELB를 이용하여 로드밸런싱
-- AWS S3 를 이용하여 첨부파일 서버 따로 개설
+- AWS S3 를 이용하여 첨부파일 서버 따로 개설 => s3사용시 액세스키가 쓰여서 보안문제로 s3쓰기전버전만 첨부해놨습니다.
 
 # 개선점
 - 비밀번호 찾기 기능
