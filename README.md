@@ -115,7 +115,7 @@
 ![KakaoTalk_20211202_220946111](https://user-images.githubusercontent.com/74958665/144619996-d85c60be-644c-4bb0-8fca-064b264ed3a7.png)
 
 - AWS S3 서버
-- ![test](https://user-images.githubusercontent.com/74958665/144957840-d77f77d6-20b3-4da0-84ab-5acad39a56bc.PNG)
+![test](https://user-images.githubusercontent.com/74958665/144957840-d77f77d6-20b3-4da0-84ab-5acad39a56bc.PNG)
 
 
 # 프로젝트 결과물
