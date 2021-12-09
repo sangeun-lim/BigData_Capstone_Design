@@ -131,3 +131,4 @@
 - 결제 시스템(멤버십 기능 활성화를 위해)
 
 # 수상
+[수상.pdf](https://github.com/sangeun-lim/BigData_Capstone_Design/files/7683616/default.pdf)
