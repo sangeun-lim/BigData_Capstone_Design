@@ -132,4 +132,5 @@
 
 # 수상
 [수상.pdf](https://github.com/sangeun-lim/BigData_Capstone_Design/files/7683616/default.pdf)
+
 ![KakaoTalk_20211209_175759492](https://user-images.githubusercontent.com/63418624/145365357-ee872bd9-bd24-486c-a9b5-21bcecd6f141.jpg)
